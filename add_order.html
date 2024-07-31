@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    <h2 class="text-center my-2">Add Order</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Customer Name</label>
+                        <div class="datepicker date input-group p-0 shadow-sm">
+                          <input type="text" placeholder="Example: John Doe" class="form-control py-4 px-4" id="reservationDate">
+                          <div class="input-group-append"><span class="input-group-text px-4"><i class="fa"></i></span></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Order Date</label>
+                        <div class="datepicker date input-group p-0 shadow-sm">
+                          <input type="date" placeholder="Choose a reservation date" class="form-control py-4 px-4" id="reservationDate">
+                          <div class="input-group-append"><span class="input-group-text px-4"><i class="fa"></i></span></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Pickup Date</label>
+                        <div class="datepicker date input-group p-0 shadow-sm">
+                          <input type="date" placeholder="Choose a reservation date" class="form-control py-4 px-4" id="reservationDate">
+                          <div class="input-group-append"><span class="input-group-text px-4"><i class="fa"></i></span></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Order Date</label>
+                        <div class="datepicker date input-group p-0 shadow-sm">
+                          <textarea type="date" placeholder="Choose a reservation date" class="form-control py-4 px-4" id="reservationDate" rows="3"></textarea>
+                          <div class="input-group-append"><span class="input-group-text px-4"><i class="fa"></i></span></div>
+                        </div>
+                    </div>
+                </form>  
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+
+            // INITIALIZE DATEPICKER PLUGIN
+            $('.datepicker').datepicker({
+                clearBtn: true,
+                format: "dd/mm/yyyy"
+            });
+
+
+            // FOR DEMO PURPOSE
+            $('#reservationDate').on('change', function () {
+                var pickedDate = $('input').val();
+                $('#pickedDate').html(pickedDate);
+            });
+        });
+    </script>
+</body>
+</html>
